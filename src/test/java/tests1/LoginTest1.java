@@ -30,6 +30,9 @@ public class LoginTest1 {
 	  lp.usernametextbox("Admin");
 	  lp.passwordtextbox("admin123");
 	  lp.clicklogin();
+System.out.println("login successfully");
+System.out.println("login successfully2");
+System.out.println("login successfully3");
   }
   @Test
   public void verifytitle() {
