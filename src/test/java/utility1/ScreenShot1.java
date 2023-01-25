@@ -13,34 +13,35 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class ScreenShot1 {
-	
-	public static void captureScreen(WebDriver driver,String name) throws IOException {
+
+	public static void captureScreen(WebDriver driver, String name) throws IOException {
 		// Step 1 Loction to store
-	String path=System.getProperty("user.dir")+"\\Screenshots\\"+"_"+getCurrentDate()+"name"+".jpg";
+		String path = System.getProperty("user.dir") + "\\Screenshots1\\" + "_" + getCurrentDate() + "name" + ".jpg";
 
-	// Step -2 Using take screnshot reference
-	TakesScreenshot tss=(TakesScreenshot)driver;
-	
-	//Step 3 
-	File sourceFile= tss.getScreenshotAs(OutputType.FILE);
-	
-	//Step-4 Using File Object
-	File destinationFile= new File(path);
-	
-	//step-5 using file handler.
-	FileHandler.copy(sourceFile, destinationFile);
+		// Step -2 Using take screnshot reference
+		TakesScreenshot tss = (TakesScreenshot) driver;
+
+		// Step 3
+		File sourceFile = tss.getScreenshotAs(OutputType.FILE);
+
+		// Step-4 Using File Object
+		File destinationFile = new File(path);
+
+		// step-5 using file handler.
+		FileHandler.copy(sourceFile, destinationFile);
 	}
-	
+
 	public static String getCurrentDate() {
-		DateFormat date=new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-		Calendar cal=Calendar.getInstance();
-		String currentDate=date.format(cal.getTime());
-		return(currentDate);
+		DateFormat date = new SimpleDateFormat("DD-MM-YYYY hh:mm:ss");
+		Calendar cal = Calendar.getInstance();
+		String currentDate = date.format(cal.getTime());
+		return (currentDate);
 	}
 
+	
 	/*
 	 * public static void main(String[] args) {
-	 * System.out.println(getCurrentDate()); }
+	 * System.out.println(getCurrentDate()); System.out.println(captureScreen()); }
 	 */
-
+	 
 }
