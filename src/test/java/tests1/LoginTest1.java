@@ -37,6 +37,7 @@ System.out.println("login successfully3");
   @Test
   public void verifytitle() {
 	  Assert.assertFalse(driver.getTitle().contains("Orange"),"Page title does not match");
+	  System.out.println("Verify title test");
   }
   
 	    

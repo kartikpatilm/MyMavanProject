@@ -16,7 +16,7 @@ public class ScreenShot1 {
 
 	public static void captureScreen(WebDriver driver, String name) throws IOException {
 		// Step 1 Loction to store
-		String path = System.getProperty("user.dir") + "\\Screenshots1\\" + "_" + getCurrentDate() + "name" + ".jpg";
+		String path = System.getProperty("user.dir") + "\\Screenshots1\\" + "_" +name + getCurrentDate()+ ".jpg";
 
 		// Step -2 Using take screnshot reference
 		TakesScreenshot tss = (TakesScreenshot) driver;
